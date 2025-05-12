@@ -1,0 +1,64 @@
+{
+  "name": "weijiajia/country-accept-language",
+  "description": "Provides Accept-Language header strings based on country codes for Laravel applications.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "language",
+    "country",
+    "accept-language",
+    "localization",
+    "i18n"
+  ],
+  "authors": [
+    {
+      "name": "Your Name",
+      "email": "your.email@example.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^6.0|^7.0|^8.0",
+    "pestphp/pest": "^2.0",
+    "pestphp/pest-plugin-laravel": "^2.0",
+    "pestphp/pest-plugin-mock": "^2.0",
+    "laravel/pint": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Weijiajia\\CountryAcceptLanguage\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Weijiajia\\CountryAcceptLanguage\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Weijiajia\\CountryAcceptLanguage\\CountryAcceptLanguageServiceProvider"
+      ],
+      "aliases": {
+        "CountryAcceptLanguage": "Weijiajia\\CountryAcceptLanguage\\Facades\\CountryAcceptLanguage"
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "test": "vendor/bin/pest",
+    "test-coverage": "vendor/bin/pest --coverage",
+    "format": "vendor/bin/pint"
+  }
+}
